@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:h="http://xmlns.jcp.org/jsf/html">
+<ui:composition template="/template.xhtml"><ui:define name="title"><h:outputText value="Create Appliance"/></ui:define><ui:define name="body">
+<h:form><h:panelGrid columns="2">
+<h:outputLabel value="Product ID" for="productid"/><h:inputText id="productid" value="#{applianceController.selected.productid}" required="true"/>
+<h:outputLabel value="Product Name" for="productname"/><h:inputText id="productname" value="#{applianceController.selected.productname}"/>
+<h:outputLabel value="Product Type" for="producttype"/><h:inputText id="producttype" value="#{applianceController.selected.producttype}"/>
+<h:outputLabel value="Company Name" for="comapnyname"/><h:inputText id="comapnyname" value="#{applianceController.selected.comapnyname}"/>
+<h:outputLabel value="Product Price" for="productprice"/><h:inputText id="productprice" value="#{applianceController.selected.productprice}"/>
+<h:outputLabel value="Discount Price" for="discountprice"/><h:inputText id="discountprice" value="#{applianceController.selected.discountprice}"/>
+<h:outputLabel value="Description" for="description"/><h:inputText id="description" value="#{applianceController.selected.description}"/>
+<h:outputLabel value="Stock Available" for="stockavailable"/><h:inputText id="stockavailable" value="#{applianceController.selected.stockavailable}"/>
+<h:outputLabel value="Manufacturer" for="manufacturer"/><h:inputText id="manufacturer" value="#{applianceController.selected.manufacturer}"/>
+<h:outputLabel value="Product Code" for="productcode"/><h:inputText id="productcode" value="#{applianceController.selected.productcode}"/>
+</h:panelGrid><br/><h:commandLink action="#{applianceController.create}" value="Save"/><br/><br/><h:commandLink action="#{applianceController.prepareList}" value="Show All Appliance Items" immediate="true"/></h:form>
+</ui:define></ui:composition></html>
